@@ -1,0 +1,78 @@
+/* resources/css/app.css */
+
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+/* Apply default styles to the body element */
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #ffffff;
+}
+
+/* Center the content of the page */
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* Apply styles to the main content area */
+main {
+    margin-top: 2rem;
+}
+
+/* Apply styles to form elements */
+.form-control {
+    padding: .5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    border: 1px solid #d2d6dc;
+}
+
+/* Apply styles to links */
+a {
+    color: #4299e1;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+
+a:hover {
+    color: #2c5282;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+  }
+
+input[type="email"],
+
+input[type="password"] {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+  
+
+button[type="submit"] {
+    background-color: #72a1c7;
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+  
+button[type="submit"]:hover {
+    background-color: #1d5e94;
+}
+
+
+  
