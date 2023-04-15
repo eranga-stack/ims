@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
@@ -16,12 +18,19 @@ class LoginController extends Controller
 
         $credentials = $request->only('email', 'password');
 
-        if (Auth::attempt($credentials, $request->remember)) {
-            return redirect()->intended('/');
+        if (Auth::attempt($credentials,$request->remember)) {
+            $user = Auth::user();
+            Session::put('user', $user->username);
+            return view('welcome');
         }
 
-        return redirect()->back()->withInput($request->only('email', 'remember'))->withErrors([
-            'email' => 'These credentials do not match our records.',
-        ]);
+        return redirect('/login')->withErrors(['Incorrect username or password']);
+    }
+
+    public function logout()
+    {
+        Auth::logout();
+        Session::flush();
+        return redirect('/login');
     }
 }

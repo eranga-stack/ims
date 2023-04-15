@@ -1,25 +1,12 @@
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>{{ config('app.name', 'Laravel') }}</title>
-
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
-</head>
-
+@extends('layouts.app')
+@section('main')
     <div class="container">
+        
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-body">
                         <form method="POST" action="{{ route('login') }}">
-                            @csrf
-
                             <div class="form-group row">
                                 <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Username') }}</label>
 
