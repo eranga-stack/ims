@@ -21,7 +21,9 @@ Route::get('/login', 'App\Http\Controllers\MainController@login');
 
 Route::post('/login', 'App\Http\Controllers\LoginController@login')->name('login');
 Route::post('logout', '\App\Http\Controllers\LoginController@logout')->name('logout');
-// Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
 Route::get('/welcome', 'App\Http\Controllers\MainController@welcome');
 
+Route::get('/dashboard', function () {
+    return view('admin.dashboard');
+});

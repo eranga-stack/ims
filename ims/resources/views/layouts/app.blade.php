@@ -12,6 +12,7 @@
 <body>
     @include('layouts.flash-message')
     @include('layouts.navbar')
+    @include('layouts.sidebar')
     <div class="container">
         <div class="panel panel-primary">
             <div class="panel-body">
