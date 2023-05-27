@@ -70,5 +70,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 
 run this for alias  : alias php='bash vendor/bin/sail'
 run this sudo kill `sudo lsof -t -i:3306` if Ports are not available: exposing port TCP 0.0.0.0:3306 -> 0.0.0.0:0: listen tcp 0.0.0.0:3306: bind: address already in use error come
+for bash : docker exec -it ims-laravel.test-1 bash
 
 Error invoking remote method 'docker-start-container': Error: (HTTP code 500) server error - Ports are not available: exposing port TCP 0.0.0.0:3306 -> 0.0.0.0:0: listen tcp 0.0.0.0:3306: bind: address already in use
